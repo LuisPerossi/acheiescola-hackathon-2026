@@ -7,14 +7,16 @@ router.get('/:cpf?', async (c) => {
     const { db } = env
   
     const cpf = req.param('cpf')
+    const admin = req.query('admin')
 
     const data = await db.prepare("SELECT * FROM waitlist ORDER BY points DESC")
         .all()
 
     const result = data.results.map((row, index) => ({
         position: index + 1,
-        name: (row.cpf === cpf) ? row.name : "******",
-        points: row.points
+        name: (row.cpf === cpf || admin) ? row.name : "******",
+        points: row.points,
+        cpf: (admin) ? row.cpf : "******"
     }))
 
     return c.json({ success: true, message: "Successfully retrieved waitlist!", data: result}, 200)
@@ -57,7 +59,7 @@ router.delete('/:cpf', async (c) => {
     return c.json({ success: true, message: "Waitlist entry deleted successfully!" }, 200)
 })
 
-router.patch(':/cpf', async (c) => {
+router.patch('/:cpf', async (c) => {
     const { req, env } = c
     const { db } = env
     
