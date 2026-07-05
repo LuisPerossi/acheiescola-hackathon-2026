@@ -12,11 +12,11 @@ function Navbar() {
        <img src={home} alt="home" className='btn-nav-icone' />
       </Link>
       
-      <Link to="/documentos" className="btn-nav">
+      <Link to="/lista" className="btn-nav">
       <img src={lista} alt="home" className='btn-nav-icone' />
       </Link>
       
-      <Link to="/notificacoes" className="btn-nav">
+      <Link to="/not" className="btn-nav">
        <img src={nots} alt="home" className='btn-nav-icone' />
       </Link>
       

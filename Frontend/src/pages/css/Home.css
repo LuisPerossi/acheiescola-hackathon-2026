@@ -1,0 +1,121 @@
+/* Cabeçalho específico da Home */
+.cabecalho-home {
+  background-color: #4A6FB4;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+/* Círculo amarelo para a logo */
+.logo-circulo {
+  background-color: #F4C430;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo-img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+/* Títulos das seções */
+.titulo-sessao {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.mt-20 {
+  margin-top: 25px;
+}
+
+/* Container do Google Maps */
+.mapa-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #EAEAEA;
+}
+
+/* Container de Filtros (Busca e Select) */
+.filtros-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-busca-wrapper {
+  position: relative;
+  flex: 1; /* Faz a barra de busca ocupar o espaço restante */
+}
+
+.input-busca {
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.select-serie {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 13px;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Layout do Cartão da Escola (Imagem na esquerda, Texto na direita) */
+.lista-escolas-home {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cartao-escola {
+  background-color: #F8F9FA; /* Fundo levemente cinza do print */
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.imagem-escola {
+  width: 120px;
+  height: auto;
+  min-height: 110px;
+  object-fit: cover;
+}
+
+.info-escola {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nome-escola {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.dado-escola {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 3px;
+}

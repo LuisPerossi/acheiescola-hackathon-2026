@@ -10,30 +10,15 @@ function Lista() {
 
   // Função para buscar os dados do Banco (localhost:3001)
   const buscarDados = async () => {
-    try {
-      // Faz o fetch no backend 
-      const resposta = await fetch('http://localhost:3001/listas');
-      const dados = await resposta.json();
-      setListas(dados);
-    } catch (erro) {
-      console.log("Backend offline. Usando dados de teste (Mock)...");
-      setListas([
+    setListas([
         {
           id: 1,
           escola: "EMEI/EMEF Benedito Inacio Soares",
           aluno: "Felipe L. A. Costa",
           posicao: 2
-        },
-        {
-          id: 2,
-          escola: "EMEI Idalina do Amaral Graça",
-          aluno: "Felipe L. A. Costa",
-          posicao: 8
         }
-      ]);
-    } finally {
-      setCarregando(false);
-    }
+      ])
+    setCarregando(false);
   };
 
   useEffect(() => {

@@ -37,6 +37,12 @@
   margin-top: 10px;
 }
 
+.cartao-detalhe input{
+  background-color: #ffffff;
+  color: #000;
+  height: 40px;
+  width: 80%;
+}
 .escola-titulo {
   font-size: 16px;
   text-align: center;

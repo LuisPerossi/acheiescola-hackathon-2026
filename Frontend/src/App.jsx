@@ -1,25 +1,24 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Lista from './pages/Lista'; // Importa a tela dos pais que acabamos de criar
+import Lista from './pages/Lista';
 import Espera from './pages/Espera';
-
-// Aqui no futuro vocês vão importar a tela do Admin:
-// import Admin from './Admin';
+import Home from './pages/Home';
+import Notificacoes from './pages/Notificacoes';
+import Perfil from './pages/Perfil';
+import Admin from './pages/Admin';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         {/* Rota 1: Quando acessar localhost:5173/ (A página inicial, para os pais) */}
-        <Route path="/" element={<Lista />} />
+        <Route path="/lista" element={<Lista />} />
         <Route path="/espera" element={<Espera />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/not" element={<Notificacoes />} />
+        <Route path="/perfil" element={<Perfil />} />
 
         {/* Rota 2: Quando a escola acessar localhost:5173/admin */}
-        <Route path="/admin" element={
-          <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h1>Painel da Escola</h1>
-            <p>Em construção...</p>
-          </div>
-        } />
+        <Route path="/admin" element={<Admin/>} />
       </Routes>
     </BrowserRouter>
   );

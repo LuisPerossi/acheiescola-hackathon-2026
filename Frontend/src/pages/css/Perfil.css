@@ -1,0 +1,87 @@
+/* Container de Informações do Usuário */
+.perfil-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+/* Avatar feito em CSS Puro (Bonequinho) */
+.avatar-css {
+  width: 70px;
+  height: 70px;
+  background-color: #4A6FB4;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-cabeca {
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 14px;
+}
+
+.avatar-corpo {
+  width: 48px;
+  height: 24px;
+  background-color: white;
+  border-radius: 25px 25px 0 0;
+  margin-top: 4px;
+}
+
+/* Nome do Usuário */
+.perfil-nome {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+/* Menu de Opções (Botões brancos) */
+.menu-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.opcao-item {
+  background-color: #ffffff;
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.seta-direita {
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  transform: scaleY(1.2); /* Alonga a setinha para ficar mais elegante */
+}
+
+/* Botão Azul Claro de Sair */
+.btn-sair {
+  width: 100%;
+  background-color: #8AC7E8; /* Tom de azul claro do design */
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+}

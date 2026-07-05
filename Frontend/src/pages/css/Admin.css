@@ -1,0 +1,205 @@
+/* Layout Principal (Desktop) */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* SIDEBAR AMARELA */
+.sidebar {
+  width: 250px;
+  background-color: #F4BA00; /* Amarelo baseado no print */
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-circulo-admin {
+  background-color: #ffffff; /* Ajuste se o círculo no admin for de outra cor */
+  background-color: #DDA600; /* Fundo levemente mais escuro do amarelo para o círculo */
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.logo-img-admin {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu-item.active {
+  background-color: #E2A900; /* Amarelo mais escuro para o item selecionado */
+}
+
+/* ÁREA PRINCIPAL DE CONTEÚDO */
+.admin-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.admin-titulo {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+/* ACORDEON (Cartões de Turma) */
+.acordeon {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.acordeon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.acordeon-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.acordeon-acoes {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-editar-lista {
+  background-color: transparent;
+  border: 1px solid #F4BA00;
+  color: #F4BA00;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.acordeon-icone {
+  font-size: 20px;
+  color: #333;
+}
+
+/* TABELA DE ALUNOS */
+.acordeon-body {
+  border-top: 1px solid #ccc;
+}
+
+.tabela-admin {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tabela-admin th,
+.tabela-admin td {
+  padding: 15px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.tabela-admin th {
+  font-weight: bold;
+  color: #000;
+  background-color: #ffffff;
+}
+
+.acoes-celula {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-acao {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.txt-azul { color: #4A6FB4; }
+.txt-vermelho { color: #D32F2F; }
+
+/* BOTÃO INFERIOR */
+.area-botao-criar {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.btn-criar-lista {
+  background-color: #F4BA00;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* MODAL DE CRUD */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 { margin-top: 0; margin-bottom: 20px; }
+
+.form-modal { display: flex; flex-direction: column; gap: 15px; }
+
+.form-modal input {
+  padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;
+}
+
+.modal-acoes { display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px; }
+
+.btn-cancelar { padding: 8px 15px; border: none; background: #ddd; border-radius: 4px; cursor: pointer; }
+.btn-salvar { padding: 8px 15px; border: none; background: #4A6FB4; color: white; border-radius: 4px; cursor: pointer; }
