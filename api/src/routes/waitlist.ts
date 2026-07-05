@@ -6,7 +6,7 @@ router.get('/:cpf', async (c) => {
     const { req, env } = c
     const { db } = env
   
-    const cpf = req.param('id')
+    const cpf = req.param('cpf')
 
     //Implement proper validation later
     if (!cpf) {
