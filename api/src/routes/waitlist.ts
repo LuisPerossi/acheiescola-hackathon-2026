@@ -2,13 +2,11 @@ import { Hono } from "hono";
 
 const router = new Hono<{ Bindings: CloudflareBindings }>()
 
-router.get('/', async (c) => {
+router.get('/:cpf', async (c) => {
     const { req, env } = c
     const { db } = env
-    
-    const json = await req.json().catch((err) => (null))
-
-    const { cpf } = json
+  
+    const cpf = req.param('id')
 
     //Implement proper validation later
     if (!cpf) {
